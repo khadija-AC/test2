@@ -1,5 +1,26 @@
 {
   "devDependencies": {
-    "typescript": "^5.5.3"
-  }
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0",
+    "typescript": "^5.5.3",
+    "husky": "^8.0.0"
+  },
+  "name": "husky-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Running test ...\" && exit 0",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**.js": [
+      "npx prettier --write",
+      "eslint"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
